@@ -12,7 +12,7 @@ from douban.settings import EMAIL, PASSWORD
 """
 
 # 实例化driver
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(executable_path="‪E:\develop\chromedriver.exe")
 driver.get('https://www.douban.com/')
 
 driver.find_element_by_id("form_email").send_keys(EMAIL)
