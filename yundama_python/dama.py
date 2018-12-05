@@ -90,19 +90,19 @@ class YDMHttp:
 ######################################################################
 
 # 用户名
-username = 'whoarewe'
+username = 'achjiang'
 
 # 密码
-password = 'zhoudawei123'
+password = 'QAZwsx1992,.YY'
 
 # appid
-appid = 4283
+appid = 6336
 
 # appkey
-appkey = '02074c64f0d0bb9efb2df455537b01c3'
+appkey = '53cbb8796c3354b8eed602d36dc4b2c1'
 
 # 验证码类型
-codetype = 3007
+codetype = 3000
 
 # 超时
 timeout = 60
@@ -115,7 +115,7 @@ def indetify(response_content):
         yundama = YDMHttp(username, password, appid, appkey)
 
         # 登陆云打码
-        uid = yundama.login();
+        uid = yundama.login()
         print('uid: %s' % uid)
 
         # 查询余额
