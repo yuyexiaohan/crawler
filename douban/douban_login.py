@@ -7,6 +7,9 @@ import requests
 from douban import dama
 from douban.settings import EMAIL, PASSWORD
 
+"""
+功能描述：实现自动登录豆瓣
+"""
 
 # 实例化driver
 driver = webdriver.Chrome()
