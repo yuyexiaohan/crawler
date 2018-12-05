@@ -4,12 +4,9 @@
 from selenium import webdriver
 import time
 import requests
-from yundama_python import dama
+from douban import dama
 from douban.settings import EMAIL, PASSWORD
 
-
-# EMAIL = "369668247@qq.com"
-# PASSWORD = "QAZwsx1992,.DB"
 
 # 实例化driver
 driver = webdriver.Chrome()

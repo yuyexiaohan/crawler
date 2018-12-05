@@ -2,6 +2,7 @@
 # Time : 2018/12/5
 # Author : achjiang
 import http.client, mimetypes, urllib, json, time, requests
+from douban.settings import YDM_PASSWORD, YDM_USERNAME
 
 
 ######################################################################
@@ -90,10 +91,10 @@ class YDMHttp:
 ######################################################################
 
 # 用户名
-username = 'achjiang'
+username = YDM_USERNAME
 
 # 密码
-password = 'QAZwsx1992,.YY'
+password = YDM_PASSWORD
 
 # appid
 appid = 6336
