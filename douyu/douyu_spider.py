@@ -4,8 +4,9 @@
 
 from selenium import webdriver
 import time
+import json
 
-class DouyuSpider:
+class DouyuSpider():
 	"""斗鱼"""
 	def __init__(self):
 		self.start_url = "https://www.douyu.com/directory/all"
@@ -37,7 +38,12 @@ class DouyuSpider:
 
 	def save_content_list(self, content_list):
 		"""报错数据"""
-		pass
+		file_path = "斗鱼" + ".txt"
+		with open(file_path, "a", encoding="utf-8") as f:
+			for content in content_list:
+				f.write(json.dumps(content, ensure_ascii=False, indent=2))
+				f.write("\n")
+		print("保存成功")
 
 	def run(self):
 		"""循环"""
