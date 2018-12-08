@@ -14,9 +14,13 @@ BOT_NAME = 'tencent'
 SPIDER_MODULES = ['tencent.spiders']
 NEWSPIDER_MODULE = 'tencent.spiders'
 
-
+# 日志信息显示级别设置
+# LOG_LEVEL = "WARNING"
+LOG_LEVEL = "DEBUG"
+# 日志保存路径配置
+LOG_FILE = "./tencent.log"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'tencent (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,9 +68,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'tencent.pipelines.TencentPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'tencent.pipelines.TencentPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
