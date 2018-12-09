@@ -10,5 +10,9 @@ import scrapy
 
 class WuhanresourcesannouncementItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    pub_date = scrapy.Field()
+    href = scrapy.Field()
+    content= scrapy.Field()
+    pv= scrapy.Field()
+
