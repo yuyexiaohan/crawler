@@ -32,7 +32,7 @@ class HomewhSpider(scrapy.Spider):
         # next_url = str(response.xpath("//a[text()='下一页']/@onclick").split("="))[1]
         next_url_part = response.xpath("//a[text()='下一页']/@onclick").extract()
         print ("next_url_part:", next_url_part)
-        if len(next_url_part) > 0:
+        if next_url_part is not None:
             next_url_part = response.xpath ("//a[text()='下一页']/@onclick").extract ()[0]
             next_url_part = re.findall (r"index_[0-9]+\.jhtml", next_url_part)[0]
             next_url = "http://home.wuhan.gov.cn/zyjygg/" + next_url_part
