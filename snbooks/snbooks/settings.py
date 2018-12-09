@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for snbook project
+# Scrapy settings for snbooks project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'snbook'
+BOT_NAME = 'snbooks'
 
-SPIDER_MODULES = ['snbook.spiders']
-NEWSPIDER_MODULE = 'snbook.spiders'
+SPIDER_MODULES = ['snbooks.spiders']
+NEWSPIDER_MODULE = 'snbooks.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'snbook (+http://www.yourdomain.com)'
+#USER_AGENT = 'snbooks (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'snbook.middlewares.SnbookSpiderMiddleware': 543,
+#    'snbooks.middlewares.SnbooksSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'snbook.middlewares.SnbookDownloaderMiddleware': 543,
+#    'snbooks.middlewares.SnbooksDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'snbook.pipelines.SnbookPipeline': 300,
+#    'snbooks.pipelines.SnbooksPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
