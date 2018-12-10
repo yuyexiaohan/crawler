@@ -10,5 +10,11 @@ import scrapy
 
 class SnbooksItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    cy_title = scrapy.Field()
+    cy_href = scrapy.Field()
+    book_price = scrapy.Field()
+    book_desc = scrapy.Field()
+    comment_nums = scrapy.Field()
+    book_store = scrapy.Field()
+    book_href = scrapy.Field()
+
