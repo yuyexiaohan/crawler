@@ -10,7 +10,7 @@ class Tencent1Spider(CrawlSpider):
     start_urls = ['https://hr.tencent.com/position.php?&start=0#a']
 
     rules = (
-        Rule (LinkExtractor (allow=r'position\.php\?&start=\d+#a'), follow=True),
+        Rule (LinkExtractor (allow=r'position\.php\?&start=\d+#a'), callback='parse_item', follow=True),
     )
 
     def parse_item(self, response):
@@ -25,6 +25,7 @@ class Tencent1Spider(CrawlSpider):
             item["position"] = tr.xpath (".//td[4]/text()").extract_first ()
             item["publish_date"] = tr.xpath (".//td[5]/text()").extract_first ()
             item["detail_href"] = "https://hr.tencent.com/" + tr.xpath (".//td[1]/a/@href").extract_first ()
+            print("detail_href:", item["detail_href"])
             yield scrapy.Request(
                 item["detail_href"],
                 callback=self.parse_detail,
