@@ -39,14 +39,18 @@ class SnbookSpider(scrapy.Spider):
             item["book_href"] = book.xpath(".//div[@class='res-info']/p[2]/a/@href").extract_first()
             # print ("item:", item)
             yield item
-        current_page = int ((re.findall (r"""param.currentPage = "(.*?)";""", response.body.decode())[0]))
-        page_numbers = int ((re.findall (r"""param.pageNumbers = "(.*?)";""", response.body.decode())[0]))
-        if current_page < page_numbers:
-            next_url_part = re.findall(r'^https.*-', item["cy_href"])[0]
-            next_url = next_url_part + str(current_page) + '.html'
-            print("next_url:", next_url)
-            yield scrapy.Request(
-                next_url,
-                callback=self.parse_list,
-	            meta={"item": response.meta["item"]}
-            )
+        try:
+            current_page = int((re.findall(r"""param.currentPage = "(.*?)";""", response.body.decode())[0]))
+            page_numbers = int((re.findall(r"""param.pageNumbers = "(.*?)";""", response.body.decode())[0]))
+        except Exception as e:
+            print("error:", e)
+        else:
+            if current_page < page_numbers:
+                next_url_part = re.findall(r'^https.*-', item["cy_href"])[0]
+                next_url = next_url_part + str(current_page+1) + '.html'
+                print("next_url:", next_url)
+                yield scrapy.Request(
+                    next_url,
+                    callback=self.parse_list,
+                    meta={"item": response.meta["item"]}
+                )

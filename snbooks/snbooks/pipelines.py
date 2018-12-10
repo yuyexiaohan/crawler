@@ -15,7 +15,7 @@ class SnbooksPipeline(object):
 
     def save_file(self, item):
         """存储爬去文件"""
-        file_path = "./snbooks.text"
+        file_path = "./snbooks.txt"
         with open(file_path, "a", encoding="utf-8") as f:
             f.write(json.dumps(dict(item), ensure_ascii=False, indent=2))
             f.write("\n")
