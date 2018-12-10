@@ -30,7 +30,7 @@ class TencentSpider(CrawlSpider):
         item["position"] = response.xpath ("//table[@class='tablelist textl']//tr[2]/td[1]/text()").extract_first()
         # item["publish_date"] = response.xpath ("./td[5]/text()").extract_first()
         item["job_content"] = response.xpath ("//table[@class='tablelist textl']//tr[3]//text()").extract()
-        item["job_request"] = response.xpath ("//table[@class='tablelist textl']//tr[4]//text()").extract()
+        item["job_require"] = response.xpath ("//table[@class='tablelist textl']//tr[4]//text()").extract()
         # print(item)
         return item
 
