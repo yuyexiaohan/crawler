@@ -14,9 +14,11 @@ BOT_NAME = 'crawlspider'
 SPIDER_MODULES = ['crawlspider.spiders']
 NEWSPIDER_MODULE = 'crawlspider.spiders'
 
+LOG_LEVEL = "WARNING"
+LOG_FILE = "./tencent_hr.log"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'crawlspider (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'crawlspider.pipelines.CrawlspiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'crawlspider.pipelines.CrawlspiderPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
