@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for dangdangbook project
+# Scrapy settings for wuhanResourcesAnnouncement project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,38 +9,33 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'dangdangbook'
+BOT_NAME = 'wuhanResourcesAnnouncement'
 
-SPIDER_MODULES = ['dangdangbook.spiders']
-NEWSPIDER_MODULE = 'dangdangbook.spiders'
+SPIDER_MODULES = ['wuhanResourcesAnnouncement.spiders']
+NEWSPIDER_MODULE = 'wuhanResourcesAnnouncement.spiders'
 
+LOG_LEVEL = "WARNING"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
-
-# scrapy_redis配置：配置后，爬虫具备自动查重的功能，并将数据存储在redis中
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-SCHEDULER_PERSIST = True
-REDIS_URL = "redis://127.0.0.1:6379"
-
+USER_AGENT = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Mobile Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+# 并发数
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+#DOWNLOAD_DELAY = 3  # 延时设置
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+#COOKIES_ENABLED = False  # cookies默认条件下是开启的
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -53,14 +48,15 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+# 中间键
 #SPIDER_MIDDLEWARES = {
-#    'dangdangbook.middlewares.DangdangbookSpiderMiddleware': 543,
+#    'wuhanResourcesAnnouncement.middlewares.WuhanresourcesannouncementSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'dangdangbook.middlewares.DangdangbookDownloaderMiddleware': 543,
+#    'wuhanResourcesAnnouncement.middlewares.WuhanresourcesannouncementDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -71,13 +67,14 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'dangdangbook.pipelines.DangdangbookPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'wuhanResourcesAnnouncement.pipelines.WuhanresourcesannouncementPipeline': 300,
+}
 
+# 自动限速
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
-#AUTOTHROTTLE_ENABLED = True
+# AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies

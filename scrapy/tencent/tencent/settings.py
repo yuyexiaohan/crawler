@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for dangdangbook project
+# Scrapy settings for tencent project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,21 +9,18 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'dangdangbook'
+BOT_NAME = 'tencent'
 
-SPIDER_MODULES = ['dangdangbook.spiders']
-NEWSPIDER_MODULE = 'dangdangbook.spiders'
+SPIDER_MODULES = ['tencent.spiders']
+NEWSPIDER_MODULE = 'tencent.spiders'
 
-
+# 日志信息显示级别设置
+# LOG_LEVEL = "WARNING"
+LOG_LEVEL = "DEBUG"
+# 日志保存路径配置
+LOG_FILE = "./tencent.log"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
-
-# scrapy_redis配置：配置后，爬虫具备自动查重的功能，并将数据存储在redis中
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-SCHEDULER_PERSIST = True
-REDIS_URL = "redis://127.0.0.1:6379"
-
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -54,13 +51,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'dangdangbook.middlewares.DangdangbookSpiderMiddleware': 543,
+#    'tencent.middlewares.TencentSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'dangdangbook.middlewares.DangdangbookDownloaderMiddleware': 543,
+#    'tencent.middlewares.TencentDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -71,9 +68,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'dangdangbook.pipelines.DangdangbookPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'tencent.pipelines.TencentPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
