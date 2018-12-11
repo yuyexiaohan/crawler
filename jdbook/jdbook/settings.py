@@ -14,9 +14,18 @@ BOT_NAME = 'jdbook'
 SPIDER_MODULES = ['jdbook.spiders']
 NEWSPIDER_MODULE = 'jdbook.spiders'
 
+# 日志配置
+LOG_LEVEL = "DEBUG"
+LOG_FILE = "./jdbook.log"
+
+# scrapy_redis配置：配置后，爬虫具备自动查重的功能，并将数据存储在redis中
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+SCHEDULER_PERSIST = True
+REDIS_URL = "redis://127.0.0.1:6379"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'jdbook (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,9 +73,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'jdbook.pipelines.JdbookPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'jdbook.pipelines.JdbookPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
