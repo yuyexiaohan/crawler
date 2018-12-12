@@ -15,18 +15,19 @@ class DdbookSpider(RedisSpider):
     redis_key = "ddbook"
 
     def parse(self, response):
-        bc_list = response.xpath("//div[@class='con flq_body']/div")
+        bc_list = response.xpath("//div[@class='con flq_body']/div")[4:-1]
+        print("*"*20, "bc_list:", bc_list)
         for bc in bc_list:
             item = {}
             item["category"] = bc.xpath("./dl/dt//text()").extract()
             item["category"] = [i.strip() for i in item["category"] if len(item["category"]) > 0]
             dl_list = bc.xpath(".//dl[@class='inner_dl']")
             for dl in dl_list:
-                item["dt_category"] = dl.xpath("./dt/text()").extract()
+                item["dt_category"] = dl.xpath("./dt//text()").extract()
                 item["dt_category"] = [i.strip() for i in item["dt_category"] if len (i.strip()) > 0][0]
                 category_list = dl.xpath("./dd/a")
                 for li in category_list:
-                    item["book_catagory"] = li.xpath("./span/text()").extract_first()
+                    item["book_category"] = li.xpath(".//text()").extract_first()
                     item["category_href"] = li.xpath("./@href").extract_first()
                     # print("*"*20)
                     print(item, item["category"])
@@ -41,12 +42,14 @@ class DdbookSpider(RedisSpider):
         book_list = response.xpath("//div[@id='search_nature_rg']/ul/li")
         for li in book_list:
             item["book_title"] = li.xpath("./p[1]/a/text()").extract_first()
-            item["book_img"] = li.xpath(".a/img/@src").extract_first()
+            item["book_img"] = li.xpath("./a[@class='pic']/img/@src").extract_first()
+            if item["book_img"] == "images/model/guan/url_none.png":
+                item["book_img"] = li.xpath("./a[@class='pic']/img/@data-original").extract_first ()
             item["book_desc"] = li.xpath("./p[2]").extract()
-            item["book_price"] = li.xpath("./p[3]/span/text()").extract_first().split("￥")[1]
+            item["book_price"] = li.xpath("./p[3]/span/text()").extract_first()
             item["book_author"] = li.xpath("./p[5]/span[1]/a/text()").extract()
-            item["book_pub"] = li.xpath("./p[5]/span[2]/a/text()").extract_first()
-            item["book_pub_time"] = li.xpath("./p[5]/span[2]/text()").extract_first().split("/")[1]
+            item["book_pub"] = li.xpath("./p[5]/span[3]/a/text()").extract_first()
+            item["book_pub_time"] = li.xpath("./p[5]/span[2]/text()").extract_first()
             print(item)
             yield item
 

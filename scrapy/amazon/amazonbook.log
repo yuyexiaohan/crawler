@@ -1,0 +1,863 @@
+2018-12-12 13:54:17 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: amazon)
+2018-12-12 13:54:17 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.4.1, Platform Windows-10-10.0.17134-SP0
+2018-12-12 13:54:17 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'amazon', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': './amazonbook.log', 'NEWSPIDER_MODULE': 'amazon.spiders', 'ROBOTSTXT_OBEY': True, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['amazon.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2018-12-12 13:54:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-12-12 13:54:17 [amazonbook] INFO: Reading start URLs from redis key 'amazonbook' (batch size: 16, encoding: utf-8
+2018-12-12 13:54:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-12-12 13:54:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-12-12 13:54:17 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-12-12 13:54:17 [scrapy.core.engine] INFO: Spider opened
+2018-12-12 13:54:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-12-12 13:54:17 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-12-12 13:54:42 [amazonbook] DEBUG: Read 1 requests from 'amazonbook'
+2018-12-12 13:54:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/robots.txt> (referer: None)
+2018-12-12 13:54:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B073LJR2JF/ref=lp_658394051_1_1?s=books&ie=UTF8&qid=1544593957&sr=1-1> (referer: None)
+2018-12-12 13:55:17 [scrapy.extensions.logstats] INFO: Crawled 2 pages (at 2 pages/min), scraped 0 items (at 0 items/min)
+2018-12-12 13:55:42 [amazonbook] DEBUG: Read 1 requests from 'amazonbook'
+2018-12-12 13:55:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051> (referer: None)
+2018-12-12 13:55:44 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET https://www.amazon.cn/dp/B072ZDQMWR> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658978051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658972051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658980051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658979051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658977051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658971051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07JNFFLXY> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658974051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07J35QDDP> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07J3KHVQS> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07H4K4JVH> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07JNFFLXY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01IV81ODE> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07JK2D97J> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07F7RX17J> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658970051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07J35QDDP>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07J3KHVQS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07H4K4JVH>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0011BCTLA> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01IV81ODE>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01M2CHXMX> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07D58Y2NQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00FF1ST0C> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07JK2D97J>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07CXBXMJT> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07F7RX17J>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07L6BVS1P> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01IOJ33Y8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0788WSVW1> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0011BCTLA>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01M2CHXMX>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07D58Y2NQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00FF1ST0C>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01GY4UZOQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B007QJEZEA> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00WFO7WSW> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07KLQF9K1> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07CXBXMJT>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07L6BVS1P>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01IOJ33Y8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07C5HJ331> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07DXS27RY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0722NSVQ6> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0788WSVW1>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01LYMN5UL> (referer: https://www.amazon.cn/b?ie=UTF8&node=658979051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B075DVVX2Z> (referer: https://www.amazon.cn/b?ie=UTF8&node=658979051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07FDVCJ89> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01GY4UZOQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B007QJEZEA>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00WFO7WSW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07KLQF9K1>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00BUFB6J8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07C5HJ331>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07DXS27RY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0722NSVQ6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07GVS4R3G> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B074WTYRBC> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01FHQP4T8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00DFUUYTO> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01LYMN5UL>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B075DVVX2Z>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07FDVCJ89>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00BUFB6J8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B073LWHB5T> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00SH1PY4G> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01CODVLIA> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07GVS4R3G>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B074WTYRBC>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01FHQP4T8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00DFUUYTO>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658984051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B073LWHB5T>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00SH1PY4G>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01CODVLIA>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658968051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/%E5%AE%97%E6%95%99%E5%9B%BE%E4%B9%A6/b?ie=UTF8&node=658425051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658969051> (referer: https://www.amazon.cn/%E5%93%B2%E5%AD%A6%E5%9B%BE%E4%B9%A6/b/ref=amb_link_7?ie=UTF8&node=658424051&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-left-6&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_r=XDEG0E41XTVC9Z4AV858&pf_rd_t=101&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_p=f9a3ee88-6c7a-429f-9121-f9d9527b2aee&pf_rd_i=658394051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661665051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661703051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661666051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661702051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01N800WNJ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07HTJ63XB> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B004UE7XXY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01HCRUJ2M> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01GFCXQNY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01N800WNJ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07HTJ63XB>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00F370X7U> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07KBQMGM6> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01EV0BSVY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B004UE7XXY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01HCRUJ2M>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01GFCXQNY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00XM8366W> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01ASWS4IY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B001PTHBN4> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00F370X7U>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07KBQMGM6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07DVGNYRZ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07BFBT34F> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01ESW8OY4> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01EV0BSVY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00XM8366W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01ASWS4IY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B001PTHBN4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06Y4YDVQY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01MG8J8OT> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B012M8VGYQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661666051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07DVGNYRZ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07BFBT34F>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01ESW8OY4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661705051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661715051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00AB77W1W> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B074BQ2BDV> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0043M4TTE> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01MG4AKT7> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06Y4YDVQY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01MG8J8OT>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B012M8VGYQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01N1WGMZ6> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B019MJYSU2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B079ZVM849> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00DW1GK7G> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B014891MNC> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B073LC6GHZ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B074BQ2BDV>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00AB77W1W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0043M4TTE>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01MG4AKT7>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01N1WGMZ6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B019MJYSU2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01CCJ0G6E> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01N8TWU1M> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01I2ZJJOM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B079JPHK7M> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661716051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B079ZVM849>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00DW1GK7G>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B014891MNC>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B073LC6GHZ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01CCJ0G6E>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01N8TWU1M>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01I2ZJJOM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661717051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B079JPHK7M>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01M7219PX> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661718051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01EV0BTJ0> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0011BVUN8> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01G4NJ0MK> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01M7219PX>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00JZB8R6E> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07CQL344B> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01EV0BTJ0>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0011BVUN8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01G4NJ0MK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01FHJ4YIW> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07HSX3CX3> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00JZB8R6E>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07CQL344B>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B003KRR1HU> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B005JRBY7M> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01FHJ4YIW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07HSX3CX3>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00B58LA96> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00INMBNHG> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B003KRR1HU>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B005JRBY7M>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B071YCLRN2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B003UUEB20> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00B58LA96>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00INMBNHG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0789G9WV7> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B073LYMWP8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B071YCLRN2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B003UUEB20>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B075GBJD84> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B077MT8GYJ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0789G9WV7>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B073LYMWP8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07D57L8LP> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B075GBJD84>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B077MT8GYJ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07D57L8LP>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658981051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=658975051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0011BRUVE> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B003E414CW> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661692051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B004EMLZZO> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B009CYR74C> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00S66PDEI> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00QGJJ6CW> (referer: https://www.amazon.cn/b?ie=UTF8&node=661666051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661697051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0011BRUVE>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B003E414CW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661696051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00X5DP4Y6> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01N3PA459> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B071SHBYDP> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B074489RK5> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B004EMLZZO>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B009CYR74C>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00S66PDEI>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00QGJJ6CW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B076M9MG51> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B079J83XC4> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07CG1QP9J> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B074WTZC76> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661691051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00X5DP4Y6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07FQ63HHV> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07G1YHM6W> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B007PLTCM4> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00ESAZ5Q2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07G2CTHR1> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01N3PA459>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B071SHBYDP>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B074489RK5>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B076M9MG51>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07CG1QP9J>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B079J83XC4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B074WTZC76>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01NA9VK3C> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00G24AN64> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B004QZB2X4> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07JJGKCV4> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00W59WELM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00OZGHMEM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07FQ63HHV>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07G1YHM6W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B007PLTCM4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00ESAZ5Q2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07G2CTHR1>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B077V4JYG2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00KA2PTQS> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00XTYNT7U> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07H657X7X> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07KGPTMJS> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01NA9VK3C>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00G24AN64>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B004QZB2X4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06Y3Q84RM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07JJGKCV4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00W59WELM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00OZGHMEM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07KLNHMTF> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00AHNPXW0> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00C2O3WMU> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B001195IHO> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01MAYM5CF> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B077V4JYG2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00KA2PTQS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00XTYNT7U>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07H657X7X>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07KGPTMJS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00TIHSD82> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06Y3Q84RM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B076F6VMVP> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00AQAHCNM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07F525FHF> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0776K6QMY> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B008V35AVM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07KLNHMTF>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00AHNPXW0>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00C2O3WMU>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B001195IHO>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01MAYM5CF>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00IWO8BYI> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0087OT6H4> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00TIHSD82>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661700051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00L35ZQJG> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01NAG5AQJ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07F84FQ9K> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B005I28DJU> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B076F6VMVP>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00NW2G4GC> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B009SIL3LU> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00AQAHCNM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07F525FHF>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0776K6QMY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B008V35AVM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00NW2G6XS> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00IWO8BYI>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0087OT6H4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0776K6TFC> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01JIZRH94> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00L35ZQJG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00QIFHGY4> (referer: https://www.amazon.cn/b?ie=UTF8&node=658978051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00XJ0A9DQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01NAG5AQJ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07F84FQ9K>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B005I28DJU>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00NW2G4GC>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B009SIL3LU>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00426BZ2U> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00NW2G6XS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0776K6TFC>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01JIZRH94>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01486K9E8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B007VZKM46> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01DZN31UO> (referer: https://www.amazon.cn/b?ie=UTF8&node=658979051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00QIFHGY4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00XJ0A9DQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00426BZ2U>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01HBC746C> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01N4OO3FM> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07FDTDRBW> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01486K9E8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661714051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00IIGTRN4> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07JQ1T8GM> (referer: https://www.amazon.cn/b?ie=UTF8&node=658979051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01M4R8GY8> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B007VZKM46>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01DZN31UO>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01N4OO3FM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01HBC746C>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07FDTDRBW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0775Z8CNT> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01J5ANNBS> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06Y416DPP> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00IIGTRN4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07JQ1T8GM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01M4R8GY8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07KLJDSY5> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B001D0HGUI> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00QPZARMA> (referer: https://www.amazon.cn/b?ie=UTF8&node=658979051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0775Z8CNT>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01J5ANNBS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06Y416DPP>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00WM01ME4> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00XVGI0AW> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07CBLS7CK> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07KLJDSY5>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B001D0HGUI>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00QPZARMA>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07G1YHMRK> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07L69YQHX> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B002ZG75SM> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00WM01ME4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00XVGI0AW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B009CYR71U> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00HI9LVEU> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B077VCJQH1> (referer: https://www.amazon.cn/b?ie=UTF8&node=661714051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07CBLS7CK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07G1YHMRK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07L69YQHX>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B002ZG75SM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01LESYKK2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661714051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B076DQQSMC> (referer: https://www.amazon.cn/b?ie=UTF8&node=661714051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B079N1S9LS> (referer: https://www.amazon.cn/b?ie=UTF8&node=661714051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B009CYR71U>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00HI9LVEU>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B077VCJQH1>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0711RFTM5> (referer: https://www.amazon.cn/b?ie=UTF8&node=661714051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B078952HRB> (referer: https://www.amazon.cn/b?ie=UTF8&node=661714051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01ABDCPM6> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01LESYKK2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B076DQQSMC>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B079N1S9LS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07926TSDC> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661663051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661673051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0711RFTM5>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01M3UPBO7> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B078952HRB>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01HEH7I1A> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01ABDCPM6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B001DYK4MQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07926TSDC>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00KX4GJFS> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00KSAZBA6> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B007ND9F62> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01CCL9CG2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661662051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07BSLN7BV> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07DQ2ZYXG> (referer: https://www.amazon.cn/b?ie=UTF8&node=658968051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0069K40X8> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0057V1CR2> (referer: https://www.amazon.cn/b?ie=UTF8&node=658972051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01M3UPBO7>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01HEH7I1A>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00D9KJU7W> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661704051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B001DYK4MQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00KX4GJFS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00KSAZBA6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B007ND9F62>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01CCL9CG2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B018DKIYE2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01DA0OUMK> (referer: https://www.amazon.cn/b?ie=UTF8&node=661666051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B015W2WF1C> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01CQPE0SE> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0794MC5MY> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07BSLN7BV>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07DQ2ZYXG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00KBKJNY8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658981051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0069K40X8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0057V1CR2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00D9KJU7W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07D57WC3G> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00B0T7HC4> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06ZYCRQ4R> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07GW3JMYG> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661701051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658977051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B018DKIYE2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01DA0OUMK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01CQPE0SE>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B015W2WF1C>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0794MC5MY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00KBKJNY8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661661051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00C4Q9S38> (referer: https://www.amazon.cn/b?ie=UTF8&node=661663051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00DVZIBE8> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00HY374D2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661662051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07B5Y3PNG> (referer: https://www.amazon.cn/b?ie=UTF8&node=661662051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0791WTKD7> (referer: https://www.amazon.cn/b?ie=UTF8&node=661662051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07D57WC3G>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00B0T7HC4>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06ZYCRQ4R>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07GW3JMYG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07BZBZ1BH> (referer: https://www.amazon.cn/b?ie=UTF8&node=661662051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00NTM6WSK> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00ODWQSE8> (referer: https://www.amazon.cn/b?ie=UTF8&node=658979051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B074ZX95DT> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00YMCBLT6> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B072QKHDPK> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00C4Q9S38>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00BJCI4MY> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B004Q9UGCI> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0192QSHDY> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00DVZIBE8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01JLHLLLO> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B013OYVSC2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01MSTFTVU> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01AXWZLFS> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00HY374D2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07B5Y3PNG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07BZBZ1BH>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0791WTKD7>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00NTM6WSK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00ODWQSE8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B074ZX95DT>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00YMCBLT6>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B072QKHDPK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00BJCI4MY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06WRSTDJM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B075DW33WD> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B078XX3SHJ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07DV9LWF1> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0011C8K5I> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06XRFPQ86> (referer: https://www.amazon.cn/b?ie=UTF8&node=661691051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01C40U3PK> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B004Q9UGCI>
+{'title': '现代性与大屠杀', 'boook_type1': '平装', 'price1': '\n      ￥19.00\n    ', 'boook_type2': '售价:', 'price2': '\n      ￥5.99\n    ', 'pub_date': '– 2011年1月1日', 'author': ['齐格蒙·鲍曼', '彭刚', '刘东', '杨渝东', '史建华', '& \n                 ', '\n                 更多']}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01JLHLLLO>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0192QSHDY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B013OYVSC2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01MSTFTVU>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01AXWZLFS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01LY7ZVET> (referer: https://www.amazon.cn/b?ie=UTF8&node=661661051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07KT33CW2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661661051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B005D0SZSQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B009HJ0YRO> (referer: https://www.amazon.cn/b?ie=UTF8&node=661661051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0011F3EHE> (referer: https://www.amazon.cn/b?ie=UTF8&node=661661051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01912LG0A> (referer: https://www.amazon.cn/b?ie=UTF8&node=661661051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06WRSTDJM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B075DW33WD>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B078XX3SHJ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00EAFGPX2> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07DV9LWF1>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0011C8K5I>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06XRFPQ86>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01C40U3PK>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00H7RH2CS> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00JA4TFD0> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00MFBX66W> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01AYOUB5U> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00QF18280> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01LY7ZVET>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07KT33CW2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0762CXMG7> (referer: https://www.amazon.cn/b?ie=UTF8&node=661703051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B072MPK7BY> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07JJRC19J> (referer: https://www.amazon.cn/b?ie=UTF8&node=658980051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B071S716W3> (referer: https://www.amazon.cn/b?ie=UTF8&node=661700051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B005D0SZSQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B009HJ0YRO>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0011F3EHE>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01912LG0A>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00EAFGPX2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B007NCC34O> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00NW2G4G2> (referer: https://www.amazon.cn/b?ie=UTF8&node=658974051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00H7RH2CS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01EWO62S8> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00JA4TFD0>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0716WRDFD> (referer: https://www.amazon.cn/b?ie=UTF8&node=658971051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00MFBX66W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01AYOUB5U>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00QF18280>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B072RBY3DR> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0111XHGWE> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0762CXMG7>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B072MPK7BY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07HSM2SB3> (referer: https://www.amazon.cn/b?ie=UTF8&node=661696051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661693051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07JJRC19J>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B071S716W3>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00E55CZSG> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B007NCC34O>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00NW2G4G2>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00JX7ZU10> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07G2CJP7W> (referer: https://www.amazon.cn/b?ie=UTF8&node=661692051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01EWO62S8>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B0783Z3N67> (referer: https://www.amazon.cn/b?ie=UTF8&node=661665051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07FDN2V5S> (referer: https://www.amazon.cn/b?ie=UTF8&node=661697051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0716WRDFD>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B072RBY3DR>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0111XHGWE>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B015GQBN6W> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B00UGSWOOG> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07HSM2SB3>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B015GQBRY0> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B019C5CTNY> (referer: https://www.amazon.cn/b?ie=UTF8&node=658970051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00E55CZSG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-12-12 13:55:52 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00JX7ZU10>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07G2CJP7W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01LEA5QKS> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B074BNVFFG> (referer: https://www.amazon.cn/b?ie=UTF8&node=658984051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B0783Z3N67>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07FDN2V5S>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07DL8NKWQ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661716051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07GW4FBPJ> (referer: https://www.amazon.cn/b?ie=UTF8&node=661666051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B015GQBN6W>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B00UGSWOOG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B015GQBRY0>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B019C5CTNY>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B07G21QK21> (referer: https://www.amazon.cn/b?ie=UTF8&node=658975051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/b?ie=UTF8&node=661695051> (referer: https://www.amazon.cn/b?ie=UTF8&node=658969051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01LEA5QKS>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B003EQ14AM> (referer: https://www.amazon.cn/b?ie=UTF8&node=661717051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B06Y2RGL71> (referer: https://www.amazon.cn/b?ie=UTF8&node=661715051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B074BNVFFG>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07DL8NKWQ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07GW4FBPJ>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01ALL71RW> (referer: https://www.amazon.cn/b?ie=UTF8&node=661704051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01EHR777A> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B01EHR7C7U> (referer: https://www.amazon.cn/b?ie=UTF8&node=661705051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B07G21QK21>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.cn/dp/B019Z1MDXG> (referer: https://www.amazon.cn/b?ie=UTF8&node=661702051)
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B003EQ14AM>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B06Y2RGL71>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01ALL71RW>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01EHR777A>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2018-12-12 13:55:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.cn/dp/B01EHR7C7U>
+{'title': None, 'boook_type1': None, 'price1': None, 'boook_type2': None, 'price2': None, 'pub_date': None, 'author': []}
+2018-12-12 13:55:52 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.amazon.cn/b?ie=UTF8&node=661672051. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-12-12 13:55:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.cn/b?ie=UTF8&node=661672051> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: Chunked decoder in 'CHUNK_LENGTH' state, still expecting more data to get to 'FINISHED' state.>]
+2018-12-12 13:55:52 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.amazon.cn/b?ie=UTF8&node=661671051. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-12-12 13:55:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.cn/b?ie=UTF8&node=661671051> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: Chunked decoder in 'CHUNK_LENGTH' state, still expecting more data to get to 'FINISHED' state.>]
+2018-12-12 13:55:52 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://www.amazon.cn/dp/B0042R68IU. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2018-12-12 13:55:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.cn/dp/B0042R68IU> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: Chunked decoder in 'CHUNK_LENGTH' state, still expecting more data to get to 'FINISHED' state.>]
