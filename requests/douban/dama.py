@@ -2,7 +2,7 @@
 # Time : 2018/12/5
 # Author : achjiang
 import http.client, mimetypes, urllib, json, time, requests
-from douban.settings import YDM_PASSWORD, YDM_USERNAME
+from .settings import YDM_PASSWORD, YDM_USERNAME
 
 
 ######################################################################

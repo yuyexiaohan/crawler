@@ -4,35 +4,52 @@
 from selenium import webdriver
 import time
 import requests
-from douban import dama
-from douban.settings import EMAIL, PASSWORD
+from requests.douban import dama
+from requests.douban.settings import EMAIL, PASSWORD
+from lxml import etree
 
 """
 功能描述：实现自动登录豆瓣
 """
 
 # 实例化driver
-driver = webdriver.Chrome(executable_path="‪E:\develop\chromedriver.exe")
+# driver = webdriver.Chrome(executable_path="‪E:\develop\chromedriver.exe")
+driver = webdriver.Chrome(executable_path="chromedriver")
 driver.get('https://www.douban.com/')
 
-driver.find_element_by_id("form_email").send_keys(EMAIL)
-driver.find_element_by_id("form_password").send_keys(PASSWORD)
+# 获取二级页面资源
+html = driver.page_source
+root = etree.HTML(html)
+iframes = root.xpath('//div[contains(@class,"login")]/iframe/@src')[0]
+
+# 重新获取登陆界面
+driver.get('https:' + iframes)
+
+driver.find_element_by_class_name("account-tab-account").click()
+time.sleep(1)
+
+driver.find_element_by_id("username").send_keys(EMAIL)
+driver.find_element_by_id("password").send_keys(PASSWORD)
 
 time.sleep(3)
 
-# 识别验证码
-captcha_image_url = driver.find_element_by_id("captcha_image").get_attribute("src")
-captcha_content = requests.get(captcha_image_url).content
-
-# 调用云打码平台
-captcha_code = dama.indetify(captcha_content)
-print('验证码的结果为:', captcha_code)
-
-# 输入验证码
-driver.find_element_by_id("captcha_field").send_keys(captcha_code)
+# 判断识别验证码
+try:
+    captcha_image_url = driver.find_element_by_id("captcha_image").get_attribute("src")
+except Exception as e:
+    captcha_image_url = ''
+# if captcha_image_url is not None:
+#     captcha_content = requests.get(captcha_image_url).content
+#
+#     # 调用云打码平台
+#     captcha_code = dama.indetify(captcha_content)
+#     print('验证码的结果为:', captcha_code)
+#
+#     # 输入验证码
+#     driver.find_element_by_id("captcha_field").send_keys(captcha_code)
 
 # 点击登录按钮
-driver.find_element_by_class_name("bn-submit").click()
+driver.find_element_by_class_name("account-form-field-submit").click()
 
 # 获取cookies
 cookies = {i["name"]:i["value"] for i in driver.get_cookies()}
